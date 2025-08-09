@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  preprocess:
+    build: ./preprocess
+    image: ps10_preprocess:latest
+    environment:
+      - RUN_ID=${RUN_ID}
+    volumes:
+      - ./input:/app/input:ro
+      - ./stage:/app/stage
+      - ./configs:/app/configs:ro
+      - ./common:/app/common:ro
+    network_mode: "none"
+    working_dir: /app
+
+  detect:
+    build: ./detect
+    image: ps10_detect:latest
+    environment:
+      - RUN_ID=${RUN_ID}
+    depends_on:
+      - preprocess
+    volumes:
+      - ./stage:/app/stage
+      - ./configs:/app/configs:ro
+      - ./common:/app/common:ro
+      - ./detect/models:/app/detect/models:ro
+    network_mode: "none"
+    working_dir: /app
+
+  postprocess:
+    build: ./postprocess
+    image: ps10_postprocess:latest
+    environment:
+      - RUN_ID=${RUN_ID}
+    depends_on:
+      - detect
+    volumes:
+      - ./stage:/app/stage
+      - ./output:/app/output
+      - ./configs:/app/configs:ro
+      - ./common:/app/common:ro
+    network_mode: "none"
+    working_dir: /app

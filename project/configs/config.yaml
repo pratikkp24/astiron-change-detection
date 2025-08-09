@@ -1,0 +1,39 @@
+runtime:
+  threads: 8
+  gpu: false
+  tile_size: 1024
+  tile_overlap: 64
+  tmp_dir: /app/stage/tiles
+
+preprocess:
+  target_grid: second          # first|second: which image's grid to match
+  enable_coreg: true           # subpixel shift via phase correlation (if >0.3 px)
+  cloud_mask: false            # hook for S2 SCL; default off for Stage-1
+  radiometric_norm: zscore     # zscore|histmatch|none
+  mask_land: false
+  landmask_path: /app/input/ancillary/landmask
+
+detect:
+  mode: classical              # classical|ml
+  classical:
+    index: logratio            # absdiff|ratio|logratio
+    denoise: bilateral         # none|gaussian|bilateral
+    thresh: otsu               # otsu|adaptive
+    morph:
+      open_size: 3
+      close_size: 5
+      min_area_px: 36
+  ml:
+    onnx_model: /app/detect/models/model.onnx
+    prob_threshold: 0.5
+    input_bands: RGB
+
+postprocess:
+  fill_holes_px: 16
+  min_polygon_area_m2: 100
+  simplify_tol_m: 0.5
+  crs_out: same                # same|epsg:XXXX
+
+submission:
+  team_name: "TEAMNAME"
+  zip_name_pattern: "PS10_%(date)s_%(team)s.zip"

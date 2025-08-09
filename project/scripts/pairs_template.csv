@@ -1,0 +1,3 @@
+pair_id,ref_lat,ref_lon,sensor,first_path,second_path,crs_target,notes
+pair_001,34.0531,74.3909,S2,a/S2_2024_06_01.tif,b/S2_2024_11_01.tif,,Sentinel-2 Kashmir region
+pair_002,28.6139,77.2090,LISS4,a/LISS4_2024_06_01.tif,b/LISS4_2024_11_01.tif,,ResourceSat-2 Delhi region

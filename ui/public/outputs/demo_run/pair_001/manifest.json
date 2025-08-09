@@ -1,0 +1,27 @@
+{
+  "pair_id": "pair_001",
+  "run_id": "demo_run",
+  "timestamp": 1701234567.89,
+  "outputs": {
+    "change_mask": "Change_Mask_34.0531_74.3909.tif",
+    "shapefile": "Change_Mask_34.0531_74.3909.shp",
+    "geojson": "Change_Mask_34.0531_74.3909.geojson"
+  },
+  "statistics": {
+    "total_pixels": 1000000,
+    "change_pixels": 5000,
+    "change_area_m2": 125000,
+    "change_area_km2": 0.125,
+    "pixel_area_m2": 25.0,
+    "total_polygons": 15,
+    "largest_area_m2": 25000,
+    "smallest_area_m2": 1000,
+    "mean_area_m2": 8333,
+    "median_area_m2": 5000
+  },
+  "processing": {
+    "min_polygon_area_m2": 100,
+    "simplify_tolerance_m": 0.5,
+    "algorithm": "classical_logratio_otsu_morphology_v1.0"
+  }
+}

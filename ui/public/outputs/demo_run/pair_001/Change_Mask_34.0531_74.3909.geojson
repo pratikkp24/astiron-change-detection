@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "change_id": 1,
+        "area_m2": 25000.0,
+        "perimeter_m": 632.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.390, 34.055],
+          [74.395, 34.055],
+          [74.395, 34.060],
+          [74.390, 34.060],
+          [74.390, 34.055]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "change_id": 2,
+        "area_m2": 15000.0,
+        "perimeter_m": 489.9
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.385, 34.050],
+          [74.390, 34.050],
+          [74.390, 34.054],
+          [74.385, 34.054],
+          [74.385, 34.050]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "change_id": 3,
+        "area_m2": 8000.0,
+        "perimeter_m": 357.8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.392, 34.048],
+          [74.396, 34.048],
+          [74.396, 34.051],
+          [74.392, 34.051],
+          [74.392, 34.048]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "change_id": 4,
+        "area_m2": 5000.0,
+        "perimeter_m": 282.8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.388, 34.045],
+          [74.391, 34.045],
+          [74.391, 34.048],
+          [74.388, 34.048],
+          [74.388, 34.045]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "change_id": 5,
+        "area_m2": 3500.0,
+        "perimeter_m": 236.1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [74.397, 34.052],
+          [74.399, 34.052],
+          [74.399, 34.054],
+          [74.397, 34.054],
+          [74.397, 34.052]
+        ]]
+      }
+    }
+  ]
+}
